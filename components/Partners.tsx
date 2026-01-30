@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Lottie from "lottie-react";
 
 // استيراد ملفات JSON مباشرة
@@ -17,15 +17,24 @@ export default function Partners() {
     { name: "Microsoft", animation: microsoftAnimation },
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.2 } },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 50, scale: 0.8 },
-    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: "easeOut" } },
-    hover: { scale: 1.1, y: -5, transition: { duration: 0.3, ease: "easeInOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.5, ease: "easeInOut" },
+    },
+    hover: {
+      scale: 1.05,
+      y: -5,
+      transition: { duration: 0.3, ease: "easeInOut" },
+    },
   };
 
   return (
@@ -53,15 +62,15 @@ export default function Partners() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {brands.map((brand) => (
+          {brands.map((brand, index) => (
             <motion.div
-              key={brand.name}
+              key={brand.name + index}
               variants={itemVariants}
               whileHover="hover"
               className="h-48 bg-white rounded-2xl flex items-center justify-center p-4 shadow-md"
             >
               <Lottie
-                animationData={brand.animation} // <-- هذا هو المهم
+                animationData={brand.animation}
                 loop={true}
                 className="w-32 h-32"
               />
