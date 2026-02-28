@@ -9,6 +9,7 @@ import Reveal from "@/components/Reveal";
 import Footer from "@/components/Footer";
 import { useState } from "react";
 import VideoModal from "@/components/VideoModal";
+import BlogSection from "@/components/BlogSection";
 
 
 
@@ -143,9 +144,15 @@ export default function Home() {
     </section>
 
       <Partners />
+      <BlogSection />
       <FAQ />
       <Contact />
       <Footer />
+      
+  
+
+   
+  
 
     
 </div>

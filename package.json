@@ -9,15 +9,20 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "framer-motion": "^12.26.2",
+    "jsonwebtoken": "^9.0.3",
     "lottie-react": "^2.4.1",
     "lucide-react": "^0.563.0",
+    "mongoose": "^9.2.1",
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.18",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
