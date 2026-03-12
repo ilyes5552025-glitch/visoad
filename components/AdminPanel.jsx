@@ -635,7 +635,9 @@ function DeleteModal({ post, onConfirm, onCancel }) {
         <p style={{ textAlign: "center", color: "var(--muted)", fontSize: 13, marginBottom: 6 }}>
           You re about to permanently delete:
         </p>
-        <p style={{ textAlign: "center", fontWeight: 600, fontSize: 14, marginBottom: 28, padding: "0 10px" }}>"{post.title}"</p>
+        <p style={{ textAlign: "center", fontWeight: 600, fontSize: 14, marginBottom: 28, padding: "0 10px" }}>&quot;{post.title}&quot;
+          
+        </p>
         <div style={{ display: "flex", gap: 10 }}>
           <button className="btn btn-ghost" style={{ flex: 1, justifyContent: "center" }} onClick={onCancel}>Cancel</button>
           <button className="btn btn-red" style={{ flex: 1, justifyContent: "center" }} onClick={confirm} disabled={deleting}>
