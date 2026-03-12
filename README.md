@@ -29,6 +29,25 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Environment variables 🌐
+
+This project uses environment variables for sensitive information such as the
+MongoDB connection string and any secrets. You set these locally in
+`.env.local` for development, but **do not commit that file** (it's already
+ignored by `.gitignore`). An example `.env.local` might look like:
+
+```text
+MONGODB_URI=mongodb+srv://<user>:<pass>@cluster0.mongodb.net/dbname
+JWT_SECRET=your_jwt_secret
+```
+
+> **Note:** `next dev` and Vercel will read `process.env.*` at build/runtime,
+> but Vercel **does not** read your local `.env.local` file. All required
+> variables must be configured in the Vercel dashboard under *Settings ➜
+> Environment Variables*. After adding or changing values there, trigger a
+> redeploy so the new values take effect.
+
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
