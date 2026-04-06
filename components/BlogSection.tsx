@@ -27,13 +27,14 @@ export default function BlogSection() {
     <section id="blog" className="bg-white py-24">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold mb-16 text-center">
-          <span className="text-red-600">AV</span><span className="text-black">IS</span>{" "}
-          <span className="text-red-600">CLI</span><span className="text-black">ENT</span>
+          <span className="text-red-600">LA</span><span className="text-black">ST</span>{" "}
+          <span className="text-red-600">PRO</span><span className="text-black">JECTS</span>
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {posts.slice(0, 3).map(post => (
             <div key={post._id} className="bg-zinc-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
               {post.coverImage && (
+                // eslint-disable-next-line @next/next/no-img-element
                 <img
                   src={post.coverImage}
                   alt={post.title}
