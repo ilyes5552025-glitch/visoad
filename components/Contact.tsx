@@ -30,6 +30,7 @@ export default function Contact() {
       } else {
         setStatus("Failed to send message. Please try again.");
       }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       setStatus("Network error. Please try again.");
     } finally {
