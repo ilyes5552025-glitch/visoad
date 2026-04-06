@@ -13,6 +13,9 @@ export async function POST(req: NextRequest) {
   }
 
   try {
+    console.log('EMAIL_USER:', process.env.EMAIL_USER ? 'Set' : 'Not set');
+    console.log('EMAIL_PASS:', process.env.EMAIL_PASS ? 'Set' : 'Not set');
+
     // Create transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
