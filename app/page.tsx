@@ -22,38 +22,33 @@ export default function Home() {
       <Header />
       
        
-        <section id="home" className="relative min-h-screen overflow-hidden bg-[url('/images/i3.jpg')] bg-cover bg-no-repeat bg-center">
+        <section id="home" className="relative min-h-screen overflow-hidden bg-[url('/images/i3.jpg')] bg-cover bg-no-repeat bg-center flex items-center justify-center">
 
-        {/* Left content */}
+        {/* Centered content */}
+        <div className="container mx-auto px-6 text-center text-white">
 
-        <div className="container mx-auto  px-6 grid md:grid-cols-2 gap-12 items-center " >
-
-          <div>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 absolute top-30 w-full text-center " >
-              <p>
-                Our digital marketing generates <br />
-                leads for your local business
-                </p>
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              Our digital marketing generates <br className="hidden sm:block" />
+              leads for your local business
             </h1>
-            <p className="text-lg text-zinc-200 mb-8  absolute bottom-50 w-full text-center ">
+            <p className="text-base sm:text-lg md:text-xl text-zinc-200 mb-8 max-w-2xl mx-auto">
               We optimize your digital marketing for better results while saving
               you time and money!
             </p>
-            <div className="flex justify-center gap-4 absolute bottom-40 w-full text-center">
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
 
-              <button className="bg-sky-500 hover:bg-sky-600 transition px-6 py-3 rounded-full font-semibold">
-                Get &nbsp; Started &nbsp;→
+              <button className="bg-sky-500 hover:bg-sky-600 transition px-6 py-3 rounded-full font-semibold text-sm sm:text-base">
+                Get Started →
               </button>
-              <button onClick={() => setOpenVideo(true)} className="border border-white/60 px-6 py-3 rounded-full flex items-center gap-2 hover:bg-white/10 transition">
+              <button onClick={() => setOpenVideo(true)} className="border border-white/60 px-6 py-3 rounded-full flex items-center justify-center gap-2 hover:bg-white/10 transition text-sm sm:text-base">
                 Watch Our Video ▶
               </button>
               <VideoModal open={openVideo} onClose={() => setOpenVideo(false)} />
             </div>
-
-          </div> 
+          </div>
 
         </div>
-  </section>
 
 
 
