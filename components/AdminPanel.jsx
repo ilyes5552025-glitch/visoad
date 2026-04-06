@@ -270,7 +270,7 @@ function Login({ onLogin }) {
           </form>
 
           <p style={{ textAlign: "center", color: "var(--muted)", fontSize: 11, marginTop: 24, lineHeight: 1.6 }}>
-            Demo: admin@visioad.com / admin123
+            Demo: ************
           </p>
         </div>
       </div>
