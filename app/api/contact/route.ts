@@ -8,6 +8,10 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "All fields are required" }, { status: 400 });
   }
 
+  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+    return NextResponse.json({ error: "Email configuration missing" }, { status: 500 });
+  }
+
   try {
     // Create transporter
     const transporter = nodemailer.createTransport({

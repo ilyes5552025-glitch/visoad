@@ -28,7 +28,8 @@ export default function Contact() {
         setStatus("Message sent successfully!");
         setFormData({ name: "", email: "", message: "" });
       } else {
-        setStatus("Failed to send message. Please try again.");
+        const errorData = await res.json();
+        setStatus(errorData.error || "Failed to send message. Please try again.");
       }
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
