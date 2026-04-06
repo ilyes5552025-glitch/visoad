@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 
 const CATEGORIES = ["Marketing", "Design", "Web Development", "CCTV", "News", "Case Study", "General"];
 
@@ -192,7 +192,7 @@ function Toast({ msg, type, onDone }) {
   useEffect(() => {
     const t = setTimeout(onDone, 2800);
     return () => clearTimeout(t);
-  }, []);
+  }, [onDone]);
   const color = type === "success" ? "var(--green)" : "var(--red)";
   return (
     <div className="toast">

@@ -1,7 +1,5 @@
 "use client";
-import Image from "next/image";
 import Header from "../components/Header";
-import HeaderWithDivider from "../components/HeaderWithDivider";
 import Partners from "@/components/Partners";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
@@ -49,6 +47,7 @@ export default function Home() {
           </div>
 
         </div>
+  </section>
 
 
 
