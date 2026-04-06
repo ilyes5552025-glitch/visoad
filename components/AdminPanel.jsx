@@ -269,9 +269,6 @@ function Login({ onLogin }) {
             </button>
           </form>
 
-          <p style={{ textAlign: "center", color: "var(--muted)", fontSize: 11, marginTop: 24, lineHeight: 1.6 }}>
-            
-          </p>
         </div>
       </div>
     </div>
