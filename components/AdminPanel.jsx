@@ -249,7 +249,7 @@ function Login({ onLogin }) {
           <form onSubmit={submit} style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             <div>
               <label className="form-label">Email</label>
-              <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="admin@visioad.com" required />
+              <input type="email" value={email} onChange={e => setEmail(e.target.value)}  required />
             </div>
             <div>
               <label className="form-label">Password</label>
